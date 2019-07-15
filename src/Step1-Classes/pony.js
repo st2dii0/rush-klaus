@@ -4,8 +4,8 @@ export default class Pony extends Toy{
     #_nb = 1
     constructor(id){
         super()
-        this.id = this.#_nb
-        this.#_nb ++
+        this.id = Pony.incrementId();
+        this.#_nb++
         this.pop()
     }
 
@@ -18,5 +18,15 @@ export default class Pony extends Toy{
 
     isMoved(){
         console.log(`Huuuuuuhu!`);
+    }
+
+    getType(){
+        return `Pony #${this.id}`
+    }
+
+    static incrementId() {
+        if (!this.latestId) this.latestId = 1
+        else this.latestId++
+        return this.latestId
     }
 }

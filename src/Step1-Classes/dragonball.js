@@ -1,4 +1,4 @@
- import Figurine from "./figurine";
+import Figurine from "./figurine";
 
 export const DBHeroes = {
     SANGOKU: 'SANGOKU',
@@ -27,5 +27,9 @@ export class DragonBall extends Figurine{
 
     isMoved(){
         console.log(`Kamé Hamé Ha!`);
+    }
+
+    getType(){
+        return `DragonBall #${this.id}`
     }
 }
