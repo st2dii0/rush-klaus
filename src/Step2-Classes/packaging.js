@@ -1,6 +1,5 @@
 export default class Packaging{
     constructor(){
-        super()
         this.isOpen = false;
         this.toy = null;
     }

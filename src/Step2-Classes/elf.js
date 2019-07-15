@@ -22,7 +22,7 @@ export default class Elf{
             console.log(`Sorry this package is not open`);
         }
         else{
-            
+            insert(item);
             console.log(`Yeaaaah! Just packing the toy ~~ X ~~`);
         }
     }
