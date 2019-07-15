@@ -1,0 +1,30 @@
+{
+  "name": "efrei-klaus",
+  "version": "1.0.0",
+  "description": "Efrei rush klaus",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx babel-node src/index.js",
+    "build": "npx babel src/ --out-dir .dist/ --copy-files",
+    "start": "node src/index.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/st2dii0/rush-klaus.git"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/node": "^7.5.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "@babel/plugin-proposal-private-methods": "^7.4.4",
+    "@babel/preset-env": "^7.5.4"
+  },
+  "author": "st2dii0",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/st2dii0/rush-klaus/issues"
+  },
+  "homepage": "https://github.com/st2dii0/rush-klaus#readme"
+}
