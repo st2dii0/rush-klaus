@@ -6,6 +6,7 @@ export default class Pony extends Toy{
         super()
         this.id = Pony.incrementId();
         this.#_nb++
+        this.type = `Pony #${this.id}`;
         this.pop()
     }
 
@@ -19,11 +20,7 @@ export default class Pony extends Toy{
     isMoved(){
         console.log(`Huuuuuuhu!`);
     }
-
-    getType(){
-        return `Pony #${this.id}`
-    }
-
+    
     static incrementId() {
         if (!this.latestId) this.latestId = 1
         else this.latestId++

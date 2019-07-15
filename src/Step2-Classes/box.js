@@ -4,5 +4,6 @@ export default class Box extends Packaging{
     constructor(){
         super()
         this.isOpen = false;
+        this.toy = null;
     }
 }

@@ -5,5 +5,6 @@ export default class Toy{
     }
 
     getType(){
+      return this.type;
     }
 }

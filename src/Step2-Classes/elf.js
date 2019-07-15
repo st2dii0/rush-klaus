@@ -1,4 +1,3 @@
-import {Packaging} from "./packaging";
 import Box from "./box";
 
 export default class Elf{
@@ -6,11 +5,11 @@ export default class Elf{
         this.nickname = nickname
     }
 
-    set nickname(name){
+    setNickname(name){
         return this.nickname = name;
     }
-    
-    get nickname(){
+
+    getNickname(){
         return this.nickname;
     }
 
@@ -18,16 +17,21 @@ export default class Elf{
         if(wraping.toy != null ){
             console.log(`Sorry this package already filled`);
         }
-        else if (wraping.isOpen == false || wraping instanceof Box){
-            console.log(`Sorry this package is not open`);
+        else if (wraping.isOpen || wraping instanceof Box){
+          wraping.insert(item);
+          console.log(`Yeaaaah! Just packing the toy ~~ ${item.type} ~~`);
         }
         else{
-            insert(item);
-            console.log(`Yeaaaah! Just packing the toy ~~ X ~~`);
+          console.log(`Sorry this package is not open`);
         }
     }
 
-    unpack(item){
-        
+    unpack(gift){
+      if(gift.isOpen || !gift.toy){
+        console.log(`Sorry this package is already empty`);
+      }
+      else{
+        console.log(`Just unpacking the toy ~~ ${gift.type} ~~`);
+      }
     }
 }

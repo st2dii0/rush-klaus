@@ -12,6 +12,7 @@ export class DragonBall extends Figurine{
     constructor(character){
         super()
         this.#_character = character
+        this.type = `Dragon Ball figurine ${this.#_character}`
         this.pop();
     }
 
@@ -22,14 +23,10 @@ export class DragonBall extends Figurine{
                     CHA-LA HEAD CHA-LA
                     Mune ga pachi-pachi suru hodo
                     Sawagu Genki-Dama --Sparking !`);
-        
+
     }
 
     isMoved(){
         console.log(`Kamé Hamé Ha!`);
-    }
-
-    getType(){
-        return `DragonBall #${this.id}`
     }
 }
