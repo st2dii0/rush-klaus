@@ -13,12 +13,12 @@ export default class Elf{
         return this.nickname;
     }
 
-    pack(wraping , item){
-        if(wraping.toy != null || wraping.toy != undefined){
+    pack(wrapping , item){
+        if(wrapping.toy != null || wrapping.toy != undefined){
             console.log(`Sorry this package already filled`);
         }
-        else if (wraping.isOpen || wraping instanceof Box){
-          wraping.insert(item);
+        else if (wrapping.isOpen || wrapping instanceof Box){
+          wrapping.insert(item);
           console.log(`Yeaaaah! Just packing the toy ~~ ${item.type} ~~`);
         }
         else{
@@ -26,12 +26,23 @@ export default class Elf{
         }
     }
 
-    unpack(wraping){
-      if(wraping.isOpen || !wraping.toy){
+    unpack(wrapping){
+      console.log(wrapping);
+      
+      if(wrapping.isOpen || !wrapping.toy){
         console.log(`Sorry this package is already empty`);
       }
       else{
-        console.log(`Just unpacking the toy ~~ ${wraping.type} ~~`);
+        var gift = wrapping.type;
+        console.log(`Just unpacking the toy ~~ ${gift} ~~`);
+        wrapping.type = null;
+        return gift;
       }
     }
+
+    take(){}
+
+    put(){}
+
+    look(){}
 }
