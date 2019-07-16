@@ -14,7 +14,7 @@ export default class Elf{
     }
 
     pack(wraping , item){
-        if(wraping.toy != null ){
+        if(wraping.toy != null || wraping.toy != undefined){
             console.log(`Sorry this package already filled`);
         }
         else if (wraping.isOpen || wraping instanceof Box){
@@ -26,12 +26,12 @@ export default class Elf{
         }
     }
 
-    unpack(gift){
-      if(gift.isOpen || !gift.toy){
+    unpack(wraping){
+      if(wraping.isOpen || !wraping.toy){
         console.log(`Sorry this package is already empty`);
       }
       else{
-        console.log(`Just unpacking the toy ~~ ${gift.type} ~~`);
+        console.log(`Just unpacking the toy ~~ ${wraping.type} ~~`);
       }
     }
 }

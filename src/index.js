@@ -19,7 +19,7 @@ var box = new Box()
 var paper = new GiftWrap();
 
 var gift = tommy.pack(box, goku);
-// tommy.pack(box, goku);
-// tommy.pack(paper, pony);
-// tommy.pack(paper, pony);
+tommy.pack(box, goku);
+tommy.pack(paper, pony);
+tommy.pack(paper, pony);
 tommy.unpack(gift);
